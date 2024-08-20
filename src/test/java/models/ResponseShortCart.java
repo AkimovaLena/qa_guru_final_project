@@ -1,2 +1,8 @@
-package models;public class ResponseShortCart {
+package models;
+
+import lombok.Data;
+
+@Data
+public class ResponseShortCart {
+ DataCart data;
 }

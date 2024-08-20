@@ -1,16 +1,11 @@
-package steps.auth;
+package stepsApi.auth;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.Test;
-
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.get;
-import static io.restassured.internal.assertion.CookieMatcher.getCookies;
 import static specs.Specs.requestSpec;
-import static specs.Specs.responseSpec200;
 
 public class GetTokenAuth {
 

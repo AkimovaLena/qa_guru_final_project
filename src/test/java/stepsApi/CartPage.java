@@ -1,4 +1,4 @@
-package steps;
+package stepsApi;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;

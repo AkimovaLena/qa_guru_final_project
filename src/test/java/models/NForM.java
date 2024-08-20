@@ -1,2 +1,9 @@
-package models;public class NForM {
+package models;
+
+import lombok.Data;
+
+@Data
+public class NForM {
+    private int m;
+    private int n;
 }

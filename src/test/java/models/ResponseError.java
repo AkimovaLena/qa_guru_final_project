@@ -1,2 +1,8 @@
-package models;public class ResponseError {
+package models;
+
+import lombok.Data;
+
+@Data
+public class ResponseError {
+    String message, requestId;
 }

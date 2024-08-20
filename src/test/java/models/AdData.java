@@ -1,11 +1,12 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import java.util.List;
-
 @Data
-public class DataShort {
-    List<Integer> items;
-    Integer quantity;
+public class AdData {
+    @JsonProperty("item_list_name")
+    String itemListName;
+    @JsonProperty("product_shelf")
+    String productShelf;
 }

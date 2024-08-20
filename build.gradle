@@ -1,19 +1,114 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id "io.freefair.lombok" version "8.6"
+    id 'io.qameta.allure' version '2.11.0'
 }
 
-group = 'ru.kulikovaelena'
-version = '1.0-SNAPSHOT'
+allure {
+    report {
+        version.set("2.27.0")
+    }
+    adapter { // отвечает за появление папочки build/allure-results
+        aspectjWeaver.set(true) //обработка аннотации @Step
+        frameworks {
+            junit5 { //название фреймворка
+                adapterVersion.set("2.27.0") //версия интеграции фреймворка и Allure
+            }
+        }
+    }
+}
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
 }
 
-test {
+dependencies {
+    testImplementation(
+            'io.qameta.allure:allure-selenide:2.27.0',
+            'org.junit.jupiter:junit-jupiter:5.10.2',
+            'io.rest-assured:rest-assured:5.3.0',
+            'io.rest-assured:json-schema-validator:5.4.0',
+            'io.qameta.allure:allure-rest-assured:2.27.0',
+            'org.slf4j:slf4j-simple:2.0.7',
+            'org.aeonbits.owner:owner:1.0.4',
+            'org.assertj:assertj-core:3.25.3',
+            'com.github.javafaker:javafaker:1.0.2',
+            'commons-io:commons-io:2.11.0',
+            'com.codeborne:selenide:7.4.0',
+            "io.appium:java-client:8.4.0",
+    )
+}
+
+
+tasks.withType(Test) {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+
+task api(type: Test) {
+    useJUnitPlatform {
+        includeTags("api")
+    }
+}
+
+task ui(type: Test) {
+    useJUnitPlatform {
+        includeTags("ui")
+    }
+}
+
+task api_cart(type: Test) {
+    useJUnitPlatform {
+        includeTags("api")
+        includeTags("cart")
+    }
+}
+
+task ui_cart(type: Test) {
+    useJUnitPlatform {
+        includeTags("ui")
+        includeTags("cart")
+    }
+}
+
+task api_catalog(type: Test) {
+    useJUnitPlatform {
+        includeTags("api")
+        includeTags("catalog")
+    }
+}
+
+task ui_catalog(type: Test) {
+    useJUnitPlatform {
+        includeTags("ui")
+        includeTags("catalog")
+    }
+
+    task ui_main(type: Test) {
+        useJUnitPlatform {
+            includeTags("ui")
+            includeTags("main_page")
+        }
+    }
 }

@@ -1,16 +1,15 @@
-package steps;
+package stepsApi;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import models.RequestProduct;
+import tests.web.TestBase;
 
-import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static specs.Specs.requestSpec;
 
-public class CatalogPage {
+public class CatalogPage extends TestBase {
 
     @Step("Получение каталога")
     public Response getCatalog(String token, Map<String,String> queryParams) {
