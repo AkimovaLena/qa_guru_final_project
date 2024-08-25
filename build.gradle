@@ -78,32 +78,21 @@ task ui(type: Test) {
     }
 }
 
-task api_cart(type: Test) {
+task cart(type: Test) {
     useJUnitPlatform {
-        includeTags("api","cart")
+        includeTags("cart")
     }
 }
 
-task ui_cart(type: Test) {
+task catalog(type: Test) {
     useJUnitPlatform {
-        includeTags("ui","cart")
+        includeTags("catalog")
     }
 }
 
-task api_catalog(type: Test) {
-    useJUnitPlatform {
-        includeTags("api","catalog")
-    }
-}
 
-task ui_catalog(type: Test) {
+task main_page(type: Test) {
     useJUnitPlatform {
-        includeTags("ui","catalog")
-    }
-}
-
-task ui_main(type: Test) {
-    useJUnitPlatform {
-        includeTags("ui","main_page")
+        includeTags("main_page")
     }
 }
