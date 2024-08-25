@@ -29,7 +29,7 @@ public class CartTest extends TestBase {
     }
 
     @Test
-    @DisplayName("Увиличение колличества товара на 1")
+    @DisplayName("Увеличение колличества товара на 1")
     void incBooksInCartTest() {
         mainPage.openMain()
                 .addAnyBook()
