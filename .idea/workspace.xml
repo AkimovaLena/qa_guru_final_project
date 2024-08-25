@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef74ac0c-a966-481e-bcf4-5b852781d3dc" name="Changes" comment="git ui and api test">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="ef74ac0c-a966-481e-bcf4-5b852781d3dc" name="Changes" comment="git v2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,55 +103,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.CartTest.addBookNotFoundTest.executor": "Run",
-    "Gradle.CartTest.addBookTest.executor": "Run",
-    "Gradle.CartTest.deleteBooksTest.executor": "Run",
-    "Gradle.CartTest.deteleAllBooksInCartTest.executor": "Run",
-    "Gradle.CartTest.deteleBookInCartNotFTest.executor": "Run",
-    "Gradle.CartTest.deteleBookInCartTest.executor": "Run",
-    "Gradle.CartTest.executor": "Run",
-    "Gradle.CatalogTest.executor": "Run",
-    "Gradle.CatalogTest.filterPreOrderListingTest.executor": "Run",
-    "Gradle.CatalogTest.getCatalogTest.executor": "Run",
-    "Gradle.CatalogTest.getCatalogWithPaginationTest.executor": "Run",
-    "Gradle.GetTokenAuth.getTokenAuth.executor": "Run",
-    "Gradle.MainPageTest.addBooksFromMainTest.executor": "Run",
-    "Gradle.MainPageTest.deleteBooksTest.executor": "Run",
-    "Gradle.MainPageTest.executor": "Run",
-    "Gradle.MainPageTest.filterListingTest.executor": "Run",
-    "Gradle.MainPageTest.incBooksInCartTest.executor": "Run",
-    "Gradle.SimplTest.catalogTest.executor": "Run",
-    "Gradle.SimplTest.deleteBooksTest.executor": "Run",
-    "Gradle.SimplTest.executor": "Run",
-    "Gradle.SimplTest.howerTest.executor": "Run",
-    "Gradle.SimplTest.incBooksInCartTest.executor": "Run",
-    "Gradle.SimplTest.listTest.executor": "Run",
-    "Gradle.SimplTest.openWebTest.executor": "Run",
-    "Gradle.SimplTest.vilterListingTest.executor": "Run",
-    "Gradle.qa_guru_final_project [allureReport].executor": "Run",
-    "Gradle.qa_guru_final_project [allureServe].executor": "Run",
-    "Gradle.qa_guru_final_project [api].executor": "Run",
-    "Gradle.qa_guru_final_project [ui].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Elena/IdeaProjects/qa_guru_final_project_mobile",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.CartTest.addBookNotFoundTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.addBookTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.deleteBooksTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.deteleAllBooksInCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.deteleBookInCartNotFTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.deteleBookInCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CatalogTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CatalogTest.filterPreOrderListingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CatalogTest.getCatalogTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CatalogTest.getCatalogWithPaginationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GetTokenAuth.getTokenAuth.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.addBooksFromMainTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.deleteBooksTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.filterListingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.incBooksInCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.catalogTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.deleteBooksTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.howerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.incBooksInCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.listTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.openWebTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.vilterListingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [allureReport].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [allureServe].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [api].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [ui].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [ui_cart].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [ui_catalog].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Elena/IdeaProjects/qa_guru_final_project/media/screens&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Elena\IdeaProjects\qa_guru_final_project\media\screens" />
+      <recent name="C:\Users\Elena\IdeaProjects\qa_guru_final_project\media\logo" />
+      <recent name="C:\Users\Elena\IdeaProjects\qa_guru_final_project\media" />
+      <recent name="C:\Users\Elena\IdeaProjects\qa_guru_final_project" />
       <recent name="C:\Users\Elena\IdeaProjects\qa_guru_final_project\src\test\resources\tpl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Elena\IdeaProjects\qa_guru_final_project\media\logo" />
+      <recent name="C:\Users\Elena\IdeaProjects\qa_guru_final_project\src\test\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="models" />
@@ -161,7 +171,7 @@
       <recent name="helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MainPageTest">
+  <component name="RunManager" selected="Gradle.qa_guru_final_project [ui_catalog]">
     <configuration name="CartTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -176,30 +186,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;tests.web.CartTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="CartTest.deleteBooksTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.web.CartTest.deleteBooksTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -258,7 +244,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="qa_guru_final_project [ui]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="qa_guru_final_project [ui_cart]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -269,7 +255,29 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="ui" />
+            <option value="ui_cart" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="qa_guru_final_project [ui_catalog]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="ui_catalog" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -282,11 +290,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.qa_guru_final_project [ui_catalog]" />
+        <item itemvalue="Gradle.qa_guru_final_project [ui_cart]" />
         <item itemvalue="Gradle.MainPageTest" />
         <item itemvalue="Gradle.CatalogTest.filterPreOrderListingTest" />
         <item itemvalue="Gradle.CartTest" />
-        <item itemvalue="Gradle.CartTest.deleteBooksTest" />
-        <item itemvalue="Gradle.qa_guru_final_project [ui]" />
       </list>
     </recent_temporary>
   </component>
@@ -307,12 +315,62 @@
       <option name="project" value="LOCAL" />
       <updated>1724129712747</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="git DisplayName">
+      <option name="closed" value="true" />
+      <created>1724577050385</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724577050385</updated>
+    </task>
+    <task id="LOCAL-00003" summary="git v2">
+      <option name="closed" value="true" />
+      <created>1724578754024</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724578754024</updated>
+    </task>
+    <task id="LOCAL-00004" summary="git v2">
+      <option name="closed" value="true" />
+      <created>1724579357032</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724579357032</updated>
+    </task>
+    <task id="LOCAL-00005" summary="git v2">
+      <option name="closed" value="true" />
+      <created>1724579955665</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724579955665</updated>
+    </task>
+    <task id="LOCAL-00006" summary="git v2">
+      <option name="closed" value="true" />
+      <created>1724581820491</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724581820491</updated>
+    </task>
+    <task id="LOCAL-00007" summary="git v2">
+      <option name="closed" value="true" />
+      <created>1724585275609</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724585275609</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git ui and api test" />
-    <option name="LAST_COMMIT_MESSAGE" value="git ui and api test" />
+    <MESSAGE value="git DisplayName" />
+    <MESSAGE value="git v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="git v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

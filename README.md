@@ -1,5 +1,5 @@
-# Домашнее задание к уроку 14 - автоматические тесты для [**x5**](https://www.x5.ru/)
-<img width="30%" title="IntelliJ IDEA" src="media/logo/chotay_gorod.png">
+# Дипломный проект для qa_guru (UI\API) [**Читай город**](https://www.x5.ru/)
+<img width="30%" title="Читай город" src="media/logo/chotay_gorod.png">
 
 
 ## 	:world_map: Содержание:
@@ -10,7 +10,6 @@
 - [Сборка в Jenkins](#-сборка-в-jenkins)
 - [Пример Allure-отчета](#-пример-allure-отчета)
 - [Интеграция с Allure TestOps](#-интеграция-с-allure-testops)
-- [Интеграция с Jira](#-интеграция-с-jira)
 - [Уведомления в Telegram с использованием бота](#-уведомления-в-telegram-с-использованием-бота)
 - [Видео примера запуска тестов в Selenoid](#видео-примера-запуска-тестов-в-selenoid)
 
