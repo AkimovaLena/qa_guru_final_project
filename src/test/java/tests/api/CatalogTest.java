@@ -17,6 +17,7 @@ import static specs.Specs.*;
 import static stepsApi.auth.GetTokenAuth.getTokenAuth;
 
 @Tags({@Tag("api"), @Tag("catalog")})
+@DisplayName("Каталог API")
 public class CatalogTest extends TestBase{
     CatalogPage catalogPage = new CatalogPage();
 

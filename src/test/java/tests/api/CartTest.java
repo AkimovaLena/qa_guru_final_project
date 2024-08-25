@@ -17,6 +17,7 @@ import static stepsApi.auth.GetTokenAuth.getTokenAuth;
 
 
 @Tags({@Tag("api"), @Tag("cart")})
+@DisplayName("Корзина API")
 public class CartTest extends TestBase {
     CartPage cartPage = new CartPage();
 
