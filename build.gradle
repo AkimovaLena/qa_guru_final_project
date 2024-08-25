@@ -80,35 +80,30 @@ task ui(type: Test) {
 
 task api_cart(type: Test) {
     useJUnitPlatform {
-        includeTags("api")
-        includeTags("cart")
+        includeTags("api","cart")
     }
 }
 
 task ui_cart(type: Test) {
     useJUnitPlatform {
-        includeTags("ui")
-        includeTags("cart")
+        includeTags("ui","cart")
     }
 }
 
 task api_catalog(type: Test) {
     useJUnitPlatform {
-        includeTags("api")
-        includeTags("catalog")
+        includeTags("api","catalog")
     }
 }
 
 task ui_catalog(type: Test) {
     useJUnitPlatform {
-        includeTags("ui")
-        includeTags("catalog")
+        includeTags("ui","catalog")
     }
+}
 
-    task ui_main(type: Test) {
-        useJUnitPlatform {
-            includeTags("ui")
-            includeTags("main_page")
-        }
+task ui_main(type: Test) {
+    useJUnitPlatform {
+        includeTags("ui","main_page")
     }
 }
