@@ -49,7 +49,7 @@ public class CartTest extends TestBase {
 
 
     @Test
-    @DisplayName("Проверка ощищения корзины")
+    @DisplayName("Проверка очищения корзины")
     void deteleAllBooksInCartTest() {
         String token = getTokenAuth();
         ResponseShortCart responseShortCart = new ResponseShortCart();
