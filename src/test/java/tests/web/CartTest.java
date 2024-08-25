@@ -10,6 +10,7 @@ import pages.CartPage;
 import pages.MainPage;
 
 @Tags({@Tag("ui"), @Tag("cart")})
+@DisplayName("Корзина")
 public class CartTest extends TestBase {
     private static final Logger log = LoggerFactory.getLogger(MainPageTest.class);
     MainPage mainPage = new MainPage();

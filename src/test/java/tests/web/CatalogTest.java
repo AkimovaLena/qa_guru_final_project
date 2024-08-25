@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import pages.CatalogPage;
 
 @Tags({@Tag("ui"), @Tag("catalog")})
+@DisplayName("Каталог")
 public class CatalogTest  extends TestBase{
 
     private static final Logger log = LoggerFactory.getLogger(MainPageTest.class);

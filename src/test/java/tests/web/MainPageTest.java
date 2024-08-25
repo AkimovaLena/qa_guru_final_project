@@ -2,6 +2,7 @@ package tests.web;
 
 import com.codeborne.selenide.ElementsCollection;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,6 +16,7 @@ import pages.MainPage;
 import static data.TestData.defaultCity;
 
 @Tags({@Tag("ui"), @Tag("main_page")})
+@DisplayName("Главная страница")
 public class MainPageTest extends TestBase {
     private static final Logger log = LoggerFactory.getLogger(MainPageTest.class);
     MainPage mainPage = new MainPage();
