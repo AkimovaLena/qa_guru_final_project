@@ -37,7 +37,7 @@ public class CartSteps {
     public Response getShortCart(String token) {
         return given(defaultLoggingRequestSpec )
                 .header("authorization", token)
-                .get("/api/steps/v1/cart/short");
+                .get("/api/v1/cart/short");
     }
 
     @Step("Получение данных корзины(полное)")

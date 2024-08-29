@@ -15,15 +15,7 @@ public class MainPage {
 
     private final SelenideElement changeCityPopup = $(".change-city-container__popup-confirmation"),
             changeCityButtonAccept = changeCityPopup.$(".change-city__button--accept"),
-            changeCityButtonCancel = changeCityPopup.$(".change-city__button--cancel"),
-            headerCity = $(".header-city__title"),
-            cityModal = $(".city-modal__content"),
-            cityModalTitle = $(".city-modal__content h1"),
-            cities = $(".city-modal__popular"),
-            catalogButton = $(".catalog__button"),
-            categories = $(".categories-menu"),
-            footer = $(".app-footer__container"),
-            headerCart = $(".header-cart__badge");
+            footer = $(".app-footer__container");
 
     final ElementsCollection categoriesColumn = $$(".categories-menu__column");
     final ElementsCollection slider = $$(".card-slider__header");
@@ -82,10 +74,13 @@ public class MainPage {
         return this;
     }
 
-    @Step("Добавляем товар в корзину")
-    public MainPage addElementInCart(SelenideElement element) {
+    @Step("Добавляем товар в корзину и запоминаем название книги и автора")
+    public BookData addElementInCart(SelenideElement element) {
+        BookData bookData = new BookData();
+        bookData.title = element.$(".product-title__head").text();
+        bookData.author = element.$(".product-title__author").text();
         element.$(".action-button").click();
-        return this;
+        return bookData;
     }
 
 

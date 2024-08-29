@@ -77,7 +77,6 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 
-
 task api(type: Test) {
     useJUnitPlatform {
         includeTags("api")

@@ -12,8 +12,7 @@ public class GetTokenAuth {
     @Step("Получение токена  авторизации")
     public static String getTokenAuth() {
         Response response = given(defaultLoggingRequestSpec).get("https://www.chitai-gorod.ru/");
-        String token = response.getCookies().get("access-token").replace("%20", " ");
-        return token;
+        return response.getCookies().get("access-token").replace("%20", " ");
 
     }
 }

@@ -5,7 +5,8 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "classpath:test.data"
 })
-public interface TestData extends Config{
+public interface TestData extends Config {
 
-    String defaultCity = "efre";
+    @DefaultValue("Москва")
+    String defaultCity();
 }
