@@ -1,6 +1,11 @@
 package data;
 
-public class TestData {
+import org.aeonbits.owner.Config;
 
-    public final static String defaultCity = "Москва";
+@Config.Sources({
+        "classpath:test.data"
+})
+public interface TestData extends Config{
+
+    String defaultCity = "efre";
 }
