@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 @Data
-@JsonIgnoreProperties(ignoreUnknown=true)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Authors {
-    String firstName,lastName,middleName,url;
+    String firstName, lastName, middleName, url;
     Integer id;
     Boolean isForeignAgent;
 }

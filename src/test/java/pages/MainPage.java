@@ -1,10 +1,8 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
@@ -27,8 +25,8 @@ public class MainPage {
             footer = $(".app-footer__container"),
             headerCart = $(".header-cart__badge");
 
-    ElementsCollection categoriesColumn = $$(".categories-menu__column"),
-            slider = $$(".card-slider__header");
+    final ElementsCollection categoriesColumn = $$(".categories-menu__column");
+    final ElementsCollection slider = $$(".card-slider__header");
 
 
     @Step("Открываем главную страницу")
@@ -38,35 +36,6 @@ public class MainPage {
         return this;
     }
 
-    @Step("Проверяем, что в заголовке город {0}")
-    public MainPage checkCity(String cityName) {
-        headerCity.shouldHave(text("Россия, " + cityName));
-        return this;
-    }
-
-    @Step("Открываем поп-ап изменения города")
-    public MainPage openPopupChangeCity() {
-        headerCity.click();
-        changeCityPopup.shouldBe(Condition.visible);
-        changeCityButtonCancel.click();
-        cityModal.shouldBe(Condition.visible);
-        cityModalTitle.shouldHave(text("Выберите город"));
-        return this;
-    }
-
-    @Step("Выбираем город {0}")
-    public MainPage selectCity(String cityName) {
-        cities.$(byText(cityName)).click();
-        sleep(2000); //задержка чтобы успел измениться город
-        return this;
-    }
-
-    @Step("Открывает меню каталога")
-    public MainPage openCatalogMenu() {
-        catalogButton.click();
-        categories.shouldBe(Condition.visible);
-        return this;
-    }
 
     @Step("Выбираем каталог {0}")
     public MainPage selectCatalog(String catalog) {
@@ -81,7 +50,7 @@ public class MainPage {
     }
 
     @Step("Прогружаем всю страницу")
-    public MainPage loadPage() {
+    public MainPage scrollToFooter() {
         footer.scrollTo();
         return this;
     }
@@ -104,8 +73,7 @@ public class MainPage {
 
     @Step("Получаем набор карточек товарта в подбоке {0}")
     public ElementsCollection getCardsSlider(String title) {
-        ElementsCollection sliders = slider.filterBy(text(title)).first().parent().parent().parent().$$(".slider__item");
-        return sliders;
+        return slider.filterBy(text(title)).first().parent().parent().parent().$$(".slider__item");
     }
 
     @Step("Проверяем, что текст кнопки добавления в корзину равен {0}")
@@ -120,25 +88,13 @@ public class MainPage {
         return this;
     }
 
-    @Step("Проверяем, что в хедере счетчик корзины равен {0}")
-    public MainPage checkCountInCart(int value) {
-        Assertions.assertEquals(Integer.toString(value), headerCart.text());
-        return this;
-    }
-
-    @Step("Переходим в корзину (черех хедер)")
-    public void clickCart() {
-        headerCart.click();
-        sleep(1000);
-    }
 
     @Step("Добавляем любой товар в корзину")
     public MainPage addAnyBook() {
         slider.first().scrollTo();
         sleep(1000);
         addElementInCart($("body"));
-        checkButtonName($("body"),"Оформить");
-        checkCountInCart(1);
+        checkButtonName($("body"), "Оформить");
         return this;
     }
 }

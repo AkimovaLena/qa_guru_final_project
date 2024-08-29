@@ -12,9 +12,9 @@ public class Products {
     Category category;
     List<String> categoryChain;
     List<String> coauthors;
-    int cost,fullCost,fullPrice,goodsId,id,price,quantity,stock,weight;
-    Boolean disabledBonuses,inSubscription,isBook,isBookmarks,isMagic,preOrder,sale;
-    String picture,publisher,status,title,url;
+    int cost, fullCost, fullPrice, goodsId, id, price, quantity, stock, weight;
+    Boolean disabledBonuses, inSubscription, isBook, isBookmarks, isMagic, preOrder, sale;
+    String picture, publisher, status, title, url;
     @JsonProperty("nForM")
     private NForM nForM;
 }

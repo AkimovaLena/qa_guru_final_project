@@ -33,7 +33,7 @@
 Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
 
 ## :pushpin: Описание тестов:
-- [x] *java/tests/api - папка с API тестами*
+- [x] *java/tests/steps - папка с API тестами*
   - *CartTest - Сьют для тестов по Корзине*
   - *CatalogTest - Сьют для тестов по Каталогу*
 - [x] *java/tests/web - папка с UI тестами*
@@ -60,7 +60,7 @@
 Для запуска API тестов
 
 ``` bash
-gradle clean api
+gradle clean steps
 ```
 
 Для запуска UI тестов

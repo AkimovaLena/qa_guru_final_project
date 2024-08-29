@@ -11,16 +11,21 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.CatalogPage;
+import pages.HeaderComponent;
 import pages.MainPage;
+import pages.MenuCatalogComponent;
 
 import static data.TestData.defaultCity;
 
 @Tags({@Tag("ui"), @Tag("main_page")})
 @DisplayName("Главная страница UI")
-public class MainPageTest extends TestBase {
-    private static final Logger log = LoggerFactory.getLogger(MainPageTest.class);
-    MainPage mainPage = new MainPage();
-    CatalogPage catalogPage = new CatalogPage();
+public class MainPageTest extends TestBaseUI {
+    private static final Logger logger = LoggerFactory.getLogger(MainPageTest.class);
+    final MainPage mainPage = new MainPage();
+    final CatalogPage catalogPage = new CatalogPage();
+    final HeaderComponent header = new HeaderComponent();
+    final MenuCatalogComponent menuCatalog = new MenuCatalogComponent();
+
 
     @ValueSource(strings = {
             "Екатеринбург",
@@ -30,8 +35,8 @@ public class MainPageTest extends TestBase {
     })
     @ParameterizedTest(name = "Проверка изменения Российского города на {0}")
     void changeCityRussiaTest(String cityName) {
-        mainPage.openMain()
-                .checkCity(defaultCity)
+        mainPage.openMain();
+        header.checkCity(defaultCity)
                 .openPopupChangeCity()
                 .selectCity(cityName)
                 .checkCity(cityName);
@@ -43,11 +48,11 @@ public class MainPageTest extends TestBase {
             "Подарки и сувениры, Брелоки",
             "Творчество и хобби, Наклейки"
     })
-    @ParameterizedTest(name = "Проверка каталога {0} и подраздела {1}")
+    @ParameterizedTest(name = "Проверка изменения breadcrumbs после выбора каталога {0} и подраздела {1}")
     void openCatalogTest(String catalog, String subdirectory) {
-        mainPage.openMain()
-                .openCatalogMenu()
-                .selectCatalog(catalog)
+        mainPage.openMain();
+        header.openCatalogMenu();
+        menuCatalog.selectCatalog(catalog)
                 .selectSubdirectory(subdirectory);
         catalogPage.checkBreadcrumbs(catalog)
                 .checkTitlePage(subdirectory);
@@ -64,7 +69,7 @@ public class MainPageTest extends TestBase {
     @ParameterizedTest(name = "Открытие подборки {0}")
     void openSliderTest(String nameTitle) {
         mainPage.openMain()
-                .loadPage()
+                .scrollToFooter()
                 .scrollToSlider(nameTitle)
                 .openSlider(nameTitle);
         catalogPage.checkTitlePage(nameTitle);
@@ -82,8 +87,8 @@ public class MainPageTest extends TestBase {
         for (int i = 0; i < 6; i++) {
             mainPage.checkButtonName(slider.get(i), "Купить")
                     .addElementInCart(slider.get(i))
-                    .checkButtonName(slider.get(i), "Оформить")
-                    .checkCountInCart(i + 1);
+                    .checkButtonName(slider.get(i), "Оформить");
+            header.checkCountInCart(i + 1);
         }
     }
 

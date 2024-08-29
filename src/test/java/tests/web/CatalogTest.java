@@ -10,10 +10,10 @@ import pages.CatalogPage;
 
 @Tags({@Tag("ui"), @Tag("catalog")})
 @DisplayName("Каталог UI")
-public class CatalogTest  extends TestBase{
+public class CatalogTest extends TestBaseUI {
 
-    private static final Logger log = LoggerFactory.getLogger(MainPageTest.class);
-    CatalogPage catalogPage = new CatalogPage();
+    private static final Logger logger  = LoggerFactory.getLogger(MainPageTest.class);
+    final CatalogPage catalogPage = new CatalogPage();
 
     @Test
     @DisplayName("Проверка фильтра Предзаказ")
@@ -21,7 +21,7 @@ public class CatalogTest  extends TestBase{
         String value = "Предзаказ";
         catalogPage.openCatalog("/catalog/books/komiksy-110063")
                 .selectFilter(value)
-                .checkSelectFilter(value)
+                .checkSelectFilter()
                 .checkButtonText(value);
     }
 }

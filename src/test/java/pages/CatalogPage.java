@@ -7,7 +7,8 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class CatalogPage {
     private final SelenideElement breadcrumbs = $(".app-breadcrumbs__link"),
@@ -16,7 +17,7 @@ public class CatalogPage {
             filters = $(".catalog-template-filters"),
             selectFilters = $(".catalog-template-filters__list-item-checkbox");
 
-    ElementsCollection productCards = $(".products-list").$$("article");
+    final ElementsCollection productCards = $(".products-list").$$("article");
 
     @Step("Проверяем, что хлебные крошки содержат {0}")
     public CatalogPage checkBreadcrumbs(String value) {
@@ -24,7 +25,7 @@ public class CatalogPage {
         return this;
     }
 
-    @Step("Проверяем, что хлебные крошки содержат {0}")
+    @Step("Проверяем, что заголовок равен {0}")
     public CatalogPage checkTitlePage(String value) {
         titlePage.shouldHave(text(value));
         return this;
@@ -44,7 +45,7 @@ public class CatalogPage {
     }
 
     @Step("Проверяем, что фильтр {0} выбран")
-    public CatalogPage checkSelectFilter(String value) {
+    public CatalogPage checkSelectFilter() {
         selectFilters.$("[name=Предзаказ]").sibling(0).$(".checkbox-native__icon").shouldHave(attribute("alt", "Отмечено"));
         return this;
     }

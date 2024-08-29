@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class Publisher {
     int id;
-    String slug,title;
+    String slug, title;
 }

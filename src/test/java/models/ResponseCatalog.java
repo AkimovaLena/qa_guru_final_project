@@ -6,7 +6,7 @@ import java.util.List;
 
 @Data
 public class ResponseCatalog {
-    List<DataCatelog> data;
+    List<DataCatalog> data;
     Meta meta;
 
 }
