@@ -24,6 +24,7 @@ public class TestBaseUI {
         Configuration.browser = System.getProperty("browser", config.browser());
         Configuration.browserVersion = System.getProperty("version", config.browserVersion());
         Configuration.baseUrl = System.getProperty("stand", config.baseUrl());
+        System.out.println(config.isRemote());
         if (config.isRemote()) {
             Configuration.remote = config.remoteUrl();
             DesiredCapabilities capabilities = new DesiredCapabilities();
