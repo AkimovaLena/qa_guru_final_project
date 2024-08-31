@@ -12,14 +12,14 @@ import pages.CatalogPage;
 @DisplayName("Каталог UI")
 public class CatalogTest extends TestBaseUI {
 
-    private static final Logger logger  = LoggerFactory.getLogger(MainPageTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(MainPageTest.class);
     final CatalogPage catalogPage = new CatalogPage();
 
     @Test
     @DisplayName("Проверка фильтра Предзаказ")
     void filterPreOrderListingTest() {
         String value = "Предзаказ";
-        catalogPage.openCatalog("/catalog/books/komiksy-110063")
+        catalogPage.openCatalog("/catalog/books/manga-110064")
                 .selectFilter(value)
                 .checkSelectFilter()
                 .checkButtonText(value);

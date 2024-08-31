@@ -21,7 +21,7 @@ public class TestBaseUI {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = System.getProperty("browser_size", config.browserSize());
-        Configuration.browser = System.getProperty("browser",config.browser());
+        Configuration.browser = System.getProperty("browser", config.browser());
         Configuration.browserVersion = System.getProperty("version", config.browserVersion());
         Configuration.baseUrl = System.getProperty("stand", config.baseUrl());
         if (config.isRemote()) {
@@ -34,7 +34,6 @@ public class TestBaseUI {
             Configuration.browserCapabilities = capabilities;
         }
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-
     }
 
     @AfterEach

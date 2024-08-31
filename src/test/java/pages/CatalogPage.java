@@ -4,8 +4,8 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -15,7 +15,7 @@ public class CatalogPage {
             titlePage = $(".app-catalog-page__title"),
             changeCityButtonAccept = $(".change-city-container__popup-confirmation").$(".change-city__button--accept"),
             filters = $(".catalog-template-filters"),
-            selectFilters = $(".catalog-template-filters__list-item-checkbox");
+            selectFilters = $(".catalog-search-products__current-filters");
 
     final ElementsCollection productCards = $(".products-list").$$("article");
 
@@ -46,7 +46,7 @@ public class CatalogPage {
 
     @Step("Проверяем, что фильтр {0} выбран")
     public CatalogPage checkSelectFilter() {
-        selectFilters.$("[name=Предзаказ]").sibling(0).$(".checkbox-native__icon").shouldHave(attribute("alt", "Отмечено"));
+        selectFilters.$(byText("Предзаказ")).shouldBe(visible);
         return this;
     }
 

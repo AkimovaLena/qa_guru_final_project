@@ -13,6 +13,5 @@ public class GetTokenAuth {
     public static String getTokenAuth() {
         Response response = given(defaultLoggingRequestSpec).get("https://www.chitai-gorod.ru/");
         return response.getCookies().get("access-token").replace("%20", " ");
-
     }
 }

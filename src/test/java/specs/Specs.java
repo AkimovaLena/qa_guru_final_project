@@ -12,14 +12,14 @@ import static io.restassured.http.ContentType.JSON;
 
 public class Specs {
 
-    public static final RequestSpecification defaultLoggingRequestSpec  = with()
+    public static final RequestSpecification defaultLoggingRequestSpec = with()
             .filter(withCustomTemplates())
             .log().uri()
             .log().headers()
             .log().body()
             .contentType(JSON);
 
-    public static final ResponseSpecification defaultLoggingResponseSpec  = new ResponseSpecBuilder()
+    public static final ResponseSpecification defaultLoggingResponseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
             .build();

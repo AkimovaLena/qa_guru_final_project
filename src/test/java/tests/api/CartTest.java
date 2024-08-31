@@ -12,7 +12,7 @@ import steps.api.CartSteps;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static specs.Specs.*;
+import static specs.Specs.defaultLoggingResponseSpec;
 import static steps.api.auth.GetTokenAuth.getTokenAuth;
 
 
@@ -52,7 +52,7 @@ public class CartTest extends TestBaseAPI {
         String token = getTokenAuth();
         Response response = cartPage.addBook(3043215, token);
         response.then().statusCode(200).spec(defaultLoggingResponseSpec);
-        ResponseShortCart responseShortCart  = cartPage.getShortCart(token).then().extract().as(ResponseShortCart.class);
+        ResponseShortCart responseShortCart = cartPage.getShortCart(token).then().extract().as(ResponseShortCart.class);
         assertTrue(responseShortCart.getData().getQuantity() > 0);
         response = cartPage.deleteAllBooks(token);
         response.then().statusCode(204).spec(defaultLoggingResponseSpec);

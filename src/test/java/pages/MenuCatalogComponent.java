@@ -10,7 +10,6 @@ public class MenuCatalogComponent {
 
     final ElementsCollection categoriesColumn = $$(".categories-menu__column");
 
-
     @Step("Выбираем каталог {0}")
     public MenuCatalogComponent selectCatalog(String catalog) {
         categoriesColumn.first().$(byText(catalog)).click();

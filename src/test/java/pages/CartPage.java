@@ -17,8 +17,8 @@ public class CartPage {
     private final SelenideElement buttonDelete = $(".cart-item__actions-button--delete"),
             cartContent = $(".cart-item__content");
 
-    ElementsCollection productInCarts = $$(".products__items"),
-            dataCart = $(".cart-content").$$(".cart-item");
+    final ElementsCollection productInCarts = $$(".products__items");
+    final ElementsCollection dataCart = $(".cart-content").$$(".cart-item");
 
 
     @Step("Очищаем корзину")

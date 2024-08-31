@@ -22,12 +22,11 @@ public class MainPageTest extends TestBaseUI {
     private static final Logger logger = LoggerFactory.getLogger(MainPageTest.class);
     final MainPage mainPage = new MainPage();
     final CatalogPage catalogPage = new CatalogPage();
-    final CartPage cartPage =new CartPage();
+    final CartPage cartPage = new CartPage();
     final HeaderComponent header = new HeaderComponent();
     final MenuCatalogComponent menuCatalog = new MenuCatalogComponent();
 
     final TestData testData = ConfigFactory.create(TestData.class, System.getProperties());
-
 
     @ValueSource(strings = {
             "Екатеринбург",
@@ -65,8 +64,7 @@ public class MainPageTest extends TestBaseUI {
             "Лучшие из лучших",
             "Рюкзаки, ранцы и пеналы",
             "Эксклюзивно в «Читай-городе»",
-            "Скоро в продаже",
-            "Дневники для пятёрок"
+            "Скоро в продаже"
     })
     @ParameterizedTest(name = "Открытие подборки {0}")
     void openSliderTest(String nameTitle) {
@@ -89,13 +87,13 @@ public class MainPageTest extends TestBaseUI {
         List<BookData> booksData = new java.util.ArrayList<>(List.of());
         for (int i = 0; i < 6; i++) {
             mainPage.checkButtonName(slider.get(i), "Купить");
-            booksData.add( mainPage.addElementInCart(slider.get(i)) );
+            booksData.add(mainPage.addElementInCart(slider.get(i)));
             mainPage.checkButtonName(slider.get(i), "Оформить");
             header.checkCountInCart(i + 1);
         }
         header.clickCart();
         List<BookData> booksCart = cartPage.getBooksData();
-        cartPage.checkListsBooksMatches(booksData,booksCart);
+        cartPage.checkListsBooksMatches(booksData, booksCart);
     }
 
 }

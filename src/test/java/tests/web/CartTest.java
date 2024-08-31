@@ -13,7 +13,7 @@ import pages.MainPage;
 @Tags({@Tag("ui"), @Tag("cart")})
 @DisplayName("Корзина UI")
 public class CartTest extends TestBaseUI {
-    private static final Logger logger  = LoggerFactory.getLogger(MainPageTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(MainPageTest.class);
     final MainPage mainPage = new MainPage();
     final CartPage cartPage = new CartPage();
     final HeaderComponent header = new HeaderComponent();

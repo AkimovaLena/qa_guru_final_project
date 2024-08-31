@@ -7,12 +7,10 @@ import org.junit.jupiter.api.BeforeAll;
 
 public class TestBaseAPI {
 
-    static ApiRestAssuredConfig config = ConfigFactory.create(ApiRestAssuredConfig.class, System.getProperties());
-
+    static final ApiRestAssuredConfig config = ConfigFactory.create(ApiRestAssuredConfig.class, System.getProperties());
 
     @BeforeAll
     public static void beforeAll() {
         RestAssured.baseURI = config.baseUrl();
-
     }
 }

@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class Category {
     Integer id;
-    String slug,title,url;
+    String slug, title, url;
 }

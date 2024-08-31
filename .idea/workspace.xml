@@ -4,20 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef74ac0c-a966-481e-bcf4-5b852781d3dc" name="Changes" comment="git v4">
-      <change afterPath="$PROJECT_DIR$/src/test/java/config/ApiRestAssuredConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/config/WebDriverConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/BookData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/api.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/remote.properties" afterDir="false" />
+    <list default="true" id="ef74ac0c-a966-481e-bcf4-5b852781d3dc" name="Changes" comment="git v5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/data/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/config/WebDriverConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/WebDriverConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/ResponseShortCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/ResponseShortCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CatalogPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CatalogPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HeaderComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HeaderComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MenuCatalogComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MenuCatalogComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/specs/Specs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/specs/Specs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/api/CartSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/api/CartSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/api/CatalogSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/api/CatalogSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/api/auth/GetTokenAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/api/auth/GetTokenAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/CartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/TestBaseAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/TestBaseAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/web/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/web/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/web/CatalogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/web/CatalogTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/web/MainPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/web/MainPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/web/TestBaseUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/web/TestBaseUI.java" afterDir="false" />
     </list>
@@ -81,60 +85,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.CartTest.addBookErrorUnauthorizedTest.executor": "Run",
-    "Gradle.CartTest.addBookNotFoundTest.executor": "Run",
-    "Gradle.CartTest.addBookTest.executor": "Run",
-    "Gradle.CartTest.deleteBooksTest.executor": "Run",
-    "Gradle.CartTest.deteleAllBooksInCartTest.executor": "Run",
-    "Gradle.CartTest.deteleBookInCartNotFTest.executor": "Run",
-    "Gradle.CartTest.deteleBookInCartTest.executor": "Run",
-    "Gradle.CartTest.executor": "Run",
-    "Gradle.CartTest.incBooksInCartTest.executor": "Run",
-    "Gradle.CatalogTest.executor": "Run",
-    "Gradle.CatalogTest.filterPreOrderListingTest.executor": "Run",
-    "Gradle.CatalogTest.getCatalogTest.executor": "Run",
-    "Gradle.CatalogTest.getCatalogWithPaginationTest.executor": "Run",
-    "Gradle.GetTokenAuth.getTokenAuth.executor": "Run",
-    "Gradle.MainPageTest.addBooksFromMainTest.executor": "Run",
-    "Gradle.MainPageTest.changeCityRussiaTest.executor": "Run",
-    "Gradle.MainPageTest.deleteBooksTest.executor": "Run",
-    "Gradle.MainPageTest.executor": "Run",
-    "Gradle.MainPageTest.filterListingTest.executor": "Run",
-    "Gradle.MainPageTest.incBooksInCartTest.executor": "Run",
-    "Gradle.MainPageTest.openCatalogTest.executor": "Run",
-    "Gradle.SimplTest.catalogTest.executor": "Run",
-    "Gradle.SimplTest.deleteBooksTest.executor": "Run",
-    "Gradle.SimplTest.executor": "Run",
-    "Gradle.SimplTest.howerTest.executor": "Run",
-    "Gradle.SimplTest.incBooksInCartTest.executor": "Run",
-    "Gradle.SimplTest.listTest.executor": "Run",
-    "Gradle.SimplTest.openWebTest.executor": "Run",
-    "Gradle.SimplTest.vilterListingTest.executor": "Run",
-    "Gradle.qa_guru_final_project [allureReport].executor": "Run",
-    "Gradle.qa_guru_final_project [allureServe].executor": "Run",
-    "Gradle.qa_guru_final_project [api].executor": "Run",
-    "Gradle.qa_guru_final_project [cart].executor": "Run",
-    "Gradle.qa_guru_final_project [ui].executor": "Run",
-    "Gradle.qa_guru_final_project [ui_cart].executor": "Run",
-    "Gradle.qa_guru_final_project [ui_catalog].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Elena/IdeaProjects/qa_guru_final_project/src/test/resources",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.CartTest.addBookErrorUnauthorizedTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.addBookNotFoundTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.addBookTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.deleteBooksTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.deteleAllBooksInCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.deteleBookInCartNotFTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.deteleBookInCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CartTest.incBooksInCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CatalogTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CatalogTest.filterPreOrderListingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CatalogTest.getCatalogTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CatalogTest.getCatalogWithPaginationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GetTokenAuth.getTokenAuth.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.addBooksFromMainTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.changeCityRussiaTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.deleteBooksTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.filterListingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.incBooksInCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.openCatalogTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.catalogTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.deleteBooksTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.howerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.incBooksInCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.listTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.openWebTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimplTest.vilterListingTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [allureReport].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [allureServe].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [api].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [cart].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [ui].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [ui_cart].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.qa_guru_final_project [ui_catalog].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Elena/IdeaProjects/qa_guru_final_project/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;io.qameta.allure.idea.settings.ProjectSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Elena\IdeaProjects\qa_guru_final_project\src\test\resources" />
@@ -157,7 +161,7 @@
       <recent name="helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MainPageTest.addBooksFromMainTest">
+  <component name="RunManager" selected="Gradle.MainPageTest.openCatalogTest">
     <configuration name="CartTest.deleteBooksTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -182,7 +186,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CartTest.incBooksInCartTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CatalogTest.filterPreOrderListingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -195,7 +199,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.web.CartTest.incBooksInCartTest&quot;" />
+            <option value="&quot;tests.web.CatalogTest.filterPreOrderListingTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -230,7 +234,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MainPageTest.changeCityRussiaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainPageTest.openCatalogTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -243,7 +247,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.web.MainPageTest.changeCityRussiaTest&quot;" />
+            <option value="&quot;tests.web.MainPageTest.openCatalogTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -254,7 +258,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="qa_guru_final_project [api]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="qa_guru_final_project [ui]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -265,7 +269,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="api" />
+            <option value="ui" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -278,11 +282,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MainPageTest.addBooksFromMainTest" />
-        <item itemvalue="Gradle.qa_guru_final_project [api]" />
-        <item itemvalue="Gradle.CartTest.incBooksInCartTest" />
+        <item itemvalue="Gradle.MainPageTest.openCatalogTest" />
+        <item itemvalue="Gradle.CatalogTest.filterPreOrderListingTest" />
+        <item itemvalue="Gradle.qa_guru_final_project [ui]" />
         <item itemvalue="Gradle.CartTest.deleteBooksTest" />
-        <item itemvalue="Gradle.MainPageTest.changeCityRussiaTest" />
+        <item itemvalue="Gradle.MainPageTest.addBooksFromMainTest" />
       </list>
     </recent_temporary>
   </component>
@@ -359,7 +363,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724937482288</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="git v5">
+      <option name="closed" value="true" />
+      <created>1724944351489</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724944351489</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,7 +390,8 @@
     <MESSAGE value="git DisplayName" />
     <MESSAGE value="git v2" />
     <MESSAGE value="git v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="git v4" />
+    <MESSAGE value="git v5" />
+    <option name="LAST_COMMIT_MESSAGE" value="git v5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -387,11 +400,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/tests/web/SimplTest.java</url>
           <line>53</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/web/MainPageTest.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
