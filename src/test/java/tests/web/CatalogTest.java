@@ -22,6 +22,8 @@ public class CatalogTest extends TestBaseUI {
         catalogPage.openCatalog("/catalog/books/manga-110064")
                 .selectFilter(value)
                 .checkSelectFilter()
+                .scrollToProductsList()
                 .checkButtonText(value);
     }
+
 }

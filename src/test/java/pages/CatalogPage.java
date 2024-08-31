@@ -15,7 +15,8 @@ public class CatalogPage {
             titlePage = $(".app-catalog-page__title"),
             changeCityButtonAccept = $(".change-city-container__popup-confirmation").$(".change-city__button--accept"),
             filters = $(".catalog-template-filters"),
-            selectFilters = $(".catalog-search-products__current-filters");
+            selectFilters = $(".catalog-search-products__current-filters"),
+            productsList = $(".products-list");
 
     final ElementsCollection productCards = $(".products-list").$$("article");
 
@@ -55,4 +56,11 @@ public class CatalogPage {
         productCards.stream().forEach(it -> it.$(".action-button__text").shouldHave(text(value)));
         return this;
     }
+
+    @Step("Скроллим до списка товаров")
+    public CatalogPage scrollToProductsList() {
+        productsList.scrollTo();
+        return this;
+    }
+
 }
